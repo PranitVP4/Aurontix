@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aurontix — Innovating the Future. Stay tuned for something extraordinary!" />
+  <meta name="keywords" content="Aurontix, AI, Technology, Innovation, Coming Soon" />
+  <meta name="author" content="Aurontix | Pranit Patil" />
+  <meta name="theme-color" content="#00e5ff" />
+  <title>Coming Soon | Aurontix</title>
+  <link rel="icon" href="Aurontix_no_bg.png" type="image/png" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(135deg, #00111a, #001a33, #002b40);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding: 20px;
+    }
+
+    /* Background particles */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 229, 255, 0.6), transparent 70%);
+      filter: blur(30px);
+      animation: float 12s infinite ease-in-out alternate;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.7; }
+      50% { transform: translateY(-50px) translateX(50px) scale(1.2); opacity: 1; }
+      100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.7; }
+    }
+
+    .p1 { width: 180px; height: 180px; top: 10%; left: 10%; animation-delay: 0s; }
+    .p2 { width: 250px; height: 250px; bottom: 15%; right: 15%; background: radial-gradient(circle, rgba(0,255,170,0.5), transparent 70%); animation-delay: 3s; }
+    .p3 { width: 150px; height: 150px; top: 60%; left: 30%; animation-delay: 6s; }
+    .p4 { width: 120px; height: 120px; bottom: 20%; left: 10%; background: radial-gradient(circle, rgba(0,229,255,0.4), transparent 70%); animation-delay: 9s; }
+
+    /* Logo */
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px #00e5ff);
+      z-index: 2;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover { transform: scale(1.05); }
+
+    /* Typewriter text */
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00e5ff, #00ffaa);
+      -webkit-background-clip: text;
+      color: transparent;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid rgba(255, 255, 255, 0.75);
+      width: 0;
+      animation: typing 3s steps(20, end) forwards, blink 0.7s infinite;
+      z-index: 2;
+    }
+
+    @keyframes typing { from { width: 0; } to { width: 100%; } }
+    @keyframes blink { 50% { border-color: transparent; } }
+
+    p {
+      font-size: 1.2rem;
+      color: #b8dfff;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 3s;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    /* Countdown timer */
+    .timer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 4s;
+      z-index: 2;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 15px 20px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      min-width: 80px;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00e5ff;
+    }
+
+    .time-box small {
+      font-size: 0.8rem;
+      color: #b8dfff;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9rem;
+      color: #b0c7ff;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards 5s;
+      z-index: 2;
+    }
+
+    footer div:first-child {
+      color: #00e5ff;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .logo { width: 90px; }
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .time-box { min-width: 60px; padding: 10px; }
+      .time-box span { font-size: 1.3rem; }
+      footer { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="particle p1"></div>
+  <div class="particle p2"></div>
+  <div class="particle p3"></div>
+  <div class="particle p4"></div>
+
+  <img src="Aurontix_no_bg.png" alt="Aurontix Logo" class="logo" />
+  <h1>Coming Soon</h1>
+  <p>This page is under construction. Something amazing is on the way!</p>
+
+  <div class="timer">
+    <div class="time-box"><span id="days">00</span><small>Days</small></div>
+    <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+    <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+    <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+  </div>
+
+  <footer>
+    <div>© 2025–2026 Aurontix. All Rights Reserved.</div>
+    <div>Made with 💙 by Aurontix</div>
+  </footer>
+
+  <script>
+    // Restart typing animation
+    window.addEventListener("load", () => {
+      const h1 = document.querySelector("h1");
+      h1.style.width = "0";
+      setTimeout(() => {
+        h1.style.animation = "typing 3s steps(20, end) forwards, blink 0.7s infinite";
+      }, 300);
+    });
+
+    // Countdown timer (set your launch date below 👇)
+    const launchDate = new Date("October 25, 2025 00:00:00").getTime();
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days.toString().padStart(2, "0");
+      document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+      document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+      document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".timer").innerHTML = "<p style='color:#00ffaa;font-size:1.2rem;'>We’re Live Now! 🚀</p>";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

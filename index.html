@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta name="description" content="Connect with Aurontix on various platforms. Join our community today!" />
+    <meta name="keywords" content="Aurontix, Contact, Social Media, Community" />
+    <meta name="author" content="Pranit Patil" />
+
+    <title>Contact Aurontix</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="Aurontix_no_bg.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome (Async for performance) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" async />
+
+    <style>
+        /* Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+            transition: background 0.5s, color 0.5s;
+        }
+
+        body.dark {
+            background: #0a0a0a;
+            color: #fff;
+        }
+
+        body.light {
+            background: #f9f9f9;
+            color: #111;
+        }
+
+        /* Floating Logo */
+        .logo {
+            position: absolute;
+            top: 10%;
+            left: 45%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            border-radius: 50%;
+            animation: floatLogo 2s ease-in-out infinite;
+        }
+
+        .logoitem {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .logoitem:hover {
+            transform: scale(1.15);
+        }
+
+        @keyframes floatLogo {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: linear-gradient(90deg, #0077ff, #00e5ff);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 1.3rem;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            width: 50px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 30% 0 15px;
+            background: linear-gradient(270deg, #00e5ff, #0077ff, #00e5ff);
+            background-size: 600% 600%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradientText 10s ease infinite;
+        }
+
+        @keyframes gradientText {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        /* Social Cards Grid */
+        .socials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .social-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 20px;
+            background: linear-gradient(270deg, #0077ff, #00e5ff, #00ffea);
+            background-size: 400% 400%;
+            color: #fff;
+            text-decoration: none;
+            transition: transform 0.4s, box-shadow 0.4s;
+            animation: gradientMove 8s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .social-card:hover {
+            transform: scale(1.12) rotate(-3deg);
+            box-shadow: 0 0 30px #00e5ff, 0 0 50px #0077ff;
+        }
+
+        .social-card i {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00e5ff, 0 0 20px #0077ff;
+            animation: pulse 2s infinite;
+        }
+
+        .social-card span {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Particle Canvas */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Page Loader Container */
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        #page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Loader Spinner */
+        .loader {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            border: 3px solid;
+            border-color: #FFF #FFF transparent transparent;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        .loader::after,
+        .loader::before {
+            content: '';
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border: 3px solid;
+            border-color: transparent transparent #004e97 #00d9ff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            animation: rotationBack 0.5s linear infinite;
+            transform-origin: center center;
+        }
+
+        .loader::before {
+            width: 32px;
+            height: 32px;
+            border-color: #FFF #FFF transparent transparent;
+            animation: rotation 1.5s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotationBack {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        /* 📱 Responsive Fixes */
+        @media (max-width: 768px) {
+            .logo {
+                top: 5%;
+                left: 45%;
+                transform: translateX(-50%);
+            }
+
+            .logoitem {
+                height: 80px;
+                width: 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+                margin-top: 40%;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .theme-toggle {
+                width: 45px;
+                padding: 10px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                top: 6%;
+                left: 45%;
+                transform: translateX(-50%);
+            }
+
+            .logoitem {
+                height: 65px;
+                width: 65px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+                margin-top: 45%;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .social-card i {
+                font-size: 1.8rem;
+            }
+
+            .social-card span {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="dark">
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <span class="loader"></span>
+    </div>
+
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+    <div class="logo">
+        <img src="Aurontix_Company.jpg" alt="Aurontix Logo" class="logoitem" />
+    </div>
+
+    <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <main class="hero" role="main">
+        <h1>Get in Touch with Aurontix</h1>
+        <p>Connect with us on your favorite platforms. Let’s build the future together.</p>
+
+        <div style="margin: auto;" class="socials"
+            style="align-content: center; align-items: center; text-align: center;">
+
+            <a href="commingsoon.html" class="social-card" aria-label="Join us on Discord"><i
+                    class="fab fa-discord"></i><span>Discord</span></a>
+
+            <a href="commingsoon.html" class="social-card" target="_blank"><i
+                    class="fab fa-twitter"></i><span>Twitter</span></a>
+
+            <a href="commingsoon.html" class="social-card" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp
+                    Community</span></a>
+
+            <a href="commingsoon.html" class="social-card" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp
+                    Group</span></a>
+
+            <a href="commingsoon.html" class="social-card" target="_blank"><i class="fab fa-whatsapp"></i><span>WhatsApp
+                    Channel</span></a>
+
+            <a href="https://www.instagram.com/aurontix/" class="social-card" target="_blank"><i
+                    class="fab fa-instagram"></i><span>Instagram</span></a>
+
+            <a href="https://www.youtube.com/@aurontix_official7" class="social-card" target="_blank"><i
+                    class="fab fa-youtube"></i><span>YouTube</span></a>
+
+            <a href="https://www.youtube.com/@aurontix_studios" class="social-card" target="_blank"><i
+                    class="fab fa-youtube"></i><span>YouTube Studio</span></a>
+
+            <a href="commingsoon.html" class="social-card" target="_blank"><i
+                    class="fab fa-facebook"></i><span>Facebook</span></a>
+
+            <a href="https://github.com/aurontix-cell" class="social-card" target="_blank"><i
+                    class="fab fa-github"></i><span>GitHub</span></a>
+
+            <a href="https://www.linkedin.com/in/aurontix-58262b384/" class="social-card" target="_blank"><i
+                    class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+
+            <a href="https://web.telegram.org/k/#-3154215969" class="social-card" target="_blank"><i
+                    class="fab fa-telegram"></i><span>Telegram</span></a>
+
+            <a href="mailto:aurontix.co" class="social-card" id="gmail-card" target="_blank">
+                <i class="fas fa-envelope"></i>
+                <span>Email: aurontix@gmail.com</span>
+            </a>
+
+            <a href="tel:+1234567890" class="social-card"><i class="fas fa-phone"
+                    target="_blank"></i><span>Phone</span></a>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            © 2025-2026 Aurontix. All Rights Reserved.
+        </div>
+        <div>
+            Made with ❤️ by Aurontix
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Load saved theme from localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.classList.remove('dark', 'light');
+                document.body.classList.add(savedTheme);
+
+                // Update the theme icon too
+                themeBtn.innerHTML = savedTheme === 'dark'
+                    ? '<i class="fas fa-moon"></i>'
+                    : '<i class="fas fa-sun"></i>';
+            }
+        });
+
+        const themeBtn = document.getElementById('themeBtn');
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+
+            // Save current theme to localStorage
+            const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+
+            themeBtn.innerHTML = currentTheme === 'dark'
+                ? '<i class="fas fa-moon"></i>'
+                : '<i class="fas fa-sun"></i>';
+        });
+
+
+        // Particles
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        const particles = Array.from({ length: 100 }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 1.2,
+            vy: (Math.random() - 0.5) * 1.2,
+            size: Math.random() * 2 + 1
+        }));
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, width, height);
+            particles.forEach(p => {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(0, 255, 255, 0.7)';
+                ctx.fill();
+
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0 || p.x > width) p.vx *= -1;
+                if (p.y < 0 || p.y > height) p.vy *= -1;
+
+                particles.forEach(q => {
+                    const dx = p.x - q.x;
+                    const dy = p.y - q.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 100) {
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(q.x, q.y);
+                        ctx.strokeStyle = `rgba(0,255,255,${1 - dist / 100})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.stroke();
+                    }
+                });
+            });
+            requestAnimationFrame(drawParticles);
+        }
+
+        drawParticles();
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+    </script>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.classList.add('hidden');
+        });
+
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('page-loader');
+            loader.classList.add('hidden');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const loaderBg = document.getElementById('page-loader');
+            if (document.body.classList.contains('light')) {
+                loaderBg.style.backgroundColor = '#f0f0f0';
+            } else {
+                loaderBg.style.backgroundColor = '#000';
+            }
+        });
+
+    </script>
+
+
+</body>
+
+</html>
